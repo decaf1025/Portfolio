@@ -1,0 +1,518 @@
+/* general styling */
+main, .lightMode {
+  background-color: rgb(226, 178, 178);
+  color: black;
+}
+main, .darkMode {
+  background-color: black;
+  color: white;
+}
+
+section,
+.section {
+  padding: 50px 0;
+  overflow: clip;
+}
+
+.section-title {
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  color: purple;
+}
+
+/* header */
+.header {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0 15px;
+  width: 300px;
+  transition: all ease-in-out 0.3s;
+  overflow-y: auto;
+  z-index: 997;
+  border-right: 4px solid purple;
+}
+
+.header .profile-img img {
+  margin: 15px auto;
+  width: 120px;
+  border: 4px solid purple;
+}
+.header .logo img {
+  max-height: 32px;
+}
+
+.header .social-links a {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.header .social-links a:hover {
+  color: green;
+}
+
+@media (min-width: 1200px) {
+  .header~main,
+  .header~#footer {
+    margin-left: 300px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header {
+    left: -100%;
+  }
+}
+
+.header.header-show {
+  left: 0;
+}
+
+.header .header-toggle {
+  color: white;
+  background-color: purple;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  transition: background-color 0.3s;
+}
+
+.header .header-toggle:hover {
+  background-color: rgb(190, 97, 190);
+}
+
+.header #themeToggle {
+  color: white;
+  background-color: purple;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 80px;
+  z-index: 9999;
+  transition: background-color 0.3s;
+}
+
+.header #themeToggle:hover {
+  background-color: rgb(190, 97, 190);
+}
+
+/* NavBar */
+.navmenu ul {
+  list-style: none;
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+
+.navmenu a,
+.navmenu a:focus {
+  padding: 15px 10px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.navmenu a .navicon,
+.navmenu a:focus .navicon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  color: white;
+}
+
+.navmenu a:hover .navicon,
+.navmenu .active .navicon,
+.navmenu .active:focus .navicon {
+  color: white;
+}
+
+/* Hero */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero .container {
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+.hero h2 {
+  font-size: 64px;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 26px;
+}
+
+/* About */
+.about .content h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+/* Stats */
+.stats .stats-item {
+  padding: 30px;
+  width: 100%;
+}
+
+.stats .stats-item i {
+  color: purple;
+  display: block;
+  font-size: 44px;
+  float: left;
+  line-height: 0;
+}
+
+.stats .stats-item .stats-no {
+  color: purple;
+  font-size: 48px;
+  line-height: 40px;
+  display: block;
+  font-weight: 700;
+  margin-left: 60px;
+}
+
+.stats .stats-item p {
+  padding: 15px 0 0 0;
+  margin: 0 0 0 60px;
+  font-size: 14px;
+}
+
+/* Skills */
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  color: purple;
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+}
+
+.skills .progress .skill .val {
+  float: right;
+}
+
+.skills .progress-bar-wrap {
+  background: purple;
+  height: 10px;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: white;
+}
+
+/* Resume */
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid purple;
+}
+
+.resume .resume-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: purple;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+/* Projects */
+.projects .projects-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects .projects-content img {
+  width: 350px;
+  height: 350px;
+  transition: 0.3s;
+}
+
+.projects .projects-content .projects-info {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+}
+
+.projects .projects-content .projects-info h4 {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: white;
+  display: inline-block;
+  background-color: purple;
+}
+
+.projects .projects-content .projects-info p {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  color: white;
+}
+
+.projects .projects-content .projects-info .details-link {
+  position: absolute;
+  left: calc(50% - 10px);
+  font-size: 34px;
+  top: calc(50% - 14px);
+  color: white;
+  transition: 0.3s;
+}
+
+.projects .projects-content .projects-info .details-link:hover {
+  color: purple;
+}
+
+.projects .projects-content:hover .projects-info {
+  opacity: 1;
+}
+
+.projects .projects-content:hover img {
+  transform: scale(1.1);
+}
+
+#musicProd {
+  width: 100%;
+  height: 100%;
+}
+
+#musicProd img {
+  width: 100%;
+  height: 60dvh;
+}
+
+#musicProd h5 {
+  font-size: 50px;
+  font-weight: 900;
+  color: white;
+}
+
+#musicProd p {
+  font-style: oblique;
+  font-weight: 900;
+  color: blue;
+}
+
+/* Services */
+.services .service-item {
+  position: relative;
+}
+
+.services .service-item .icon {
+  background: purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid purple;
+  margin-right: 20px;
+}
+
+.services .service-item .icon i {
+  color: white;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.services .service-item:hover .icon {
+  background-color: rgb(190, 97, 190);
+}
+
+.services .service-item:hover .icon i {
+  color: green;
+}
+
+.services .service-item .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .service-item .title a {
+  color: purple;
+}
+
+.services .service-item .title a:hover {
+  color: rgb(190, 97, 190);
+}
+
+.services .service-item .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+/* Contact */
+.contact .info-wrap {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.contact .info-item i {
+  font-size: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 15px;
+}
+
+.contact .info-item h3 {
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.contact .info-item:hover i {
+  color: purple;
+}
+
+
+/* Footer */
+.footer {
+  background-color: black;
+  font-size: 14px;
+  position: relative;
+  border-top: 4px solid purple;
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+/* Scroll Top */
+.footer .scroll-top {
+  color: white;
+  background-color: purple;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+  z-index: 9999;
+  transition: background-color 0.3s;
+}
+
+.footer .scroll-top:hover {
+  background-color: rgb(190, 97, 190);
+}
